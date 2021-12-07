@@ -6,16 +6,21 @@ allows for all appointment information to be displayed and altered using the cur
 and a specified office when adding or updating appointments. The application was designed using
 Java JDK 11.0.10, JavaFX SDK 13, SceneBuilder, IntelliJ, and Maven.
 
+GETTING STARTED:
+First, download the application files and unzip them. Next, open the unzipped folder using your
+Java IDE that supports Maven, and allow Maven to import all of the required dependencies. Finally,
+compile and run the application.
+
 LOGIN AND MAIN SCREEN:
-First, compile and run the program. This will bring you to the Login Screen, where the username is
-"admin" (without quotations), and the password is "admin" (also without quotations). Logging in will
-bring you to the Main Screen where customer and appointment information is displayed in two tables.
-The column labeled "Office" in the appointments table refers to the office handling that particular
-appointment, and the column labeled "Contact Name" refers to the company employee that will be
-meeting with the customer. Customer information may be searched using the TextField above the the
-customers table, and appointments may be searched by the TextField and/or the ComboBoxes that can
-filter appointments by month and week. The "LOG OUT" button in the bottom right of the screen will
-navigate you back to the Login screen, and the "EXIT" button will close the application.
+Running the application will bring you to the Login Screen, where the username is "admin" (without
+quotations), and the password is "admin" (also without quotations). Logging in will bring you to the
+Main Screen where customer and appointment information is displayed in two tables. The column labeled
+"Office" in the appointments table refers to the office handling that particular appointment, and the
+column labeled "Contact Name" refers to the company employee that will be meeting with the customer.
+Customer information may be searched using the TextField above the the customers table, and
+appointments may be searched by the TextField and/or the ComboBoxes that can filter appointments by
+month and week. The "LOG OUT" button in the bottom right of the screen will navigate you back to the
+Login screen, and the "EXIT" button will close the application.
 
 ADD, UPDATE, AND DELETE:
 Customers and appointments can be added, updated, or deleted within the database by using the
