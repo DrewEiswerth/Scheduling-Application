@@ -4,7 +4,7 @@ customer appointment information from the company database in one easy-to-use in
 application is designed for a company with offices located in Denver, Montreal, and London, and
 allows for all appointment information to be displayed and altered using the current user's timezone
 and a specified office when adding or updating appointments. The application was designed using
-Java JDK 11.0.10, JavaFX SDK 11.0.2, and SceneBuilder.
+Java JDK 11.0.10, JavaFX SDK 13, SceneBuilder, IntelliJ, and Maven.
 
 LOGIN AND MAIN SCREEN:
 First, compile and run the program. This will bring you to the Login Screen, where the username is
