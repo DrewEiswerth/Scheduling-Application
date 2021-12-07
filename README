@@ -1,0 +1,40 @@
+OVERVIEW:
+This Scheduling Application is designed to allow users to view and manage company customer and
+customer appointment information from the company database in one easy-to-use interface. The
+application is designed for a company with offices located in Denver, Montreal, and London, and
+allows for all appointment information to be displayed and altered using the current user's timezone
+and a specified office when adding or updating appointments. The application was designed using
+Java JDK 11.0.10, JavaFX SDK 11.0.2, and SceneBuilder.
+
+LOGIN AND MAIN SCREEN:
+First, compile and run the program. This will bring you to the Login Screen, where the username is
+"admin" (without quotations), and the password is "admin" (also without quotations). Logging in will
+bring you to the Main Screen where customer and appointment information is displayed in two tables.
+The column labeled "Office" in the appointments table refers to the office handling that particular
+appointment, and the column labeled "Contact Name" refers to the company employee that will be
+meeting with the customer. Customer information may be searched using the TextField above the the
+customers table, and appointments may be searched by the TextField and/or the ComboBoxes that can
+filter appointments by month and week. The "LOG OUT" button in the bottom right of the screen will
+navigate you back to the Login screen, and the "EXIT" button will close the application.
+
+ADD, UPDATE, AND DELETE:
+Customers and appointments can be added, updated, or deleted within the database by using the
+buttons beneath each table. To update an item, first select that item in the table, and then click
+the "UPDATE" button. The deletion of a customer will also delete all of that customer's appointments
+within the database. The "ADD" and "UPDATE" buttons will navigate you to new screens where
+information can be input via TextFields and ComboBoxes. The selection of "Office" when adding or
+updating an appointment will allow the conversion of the appointment start and end date/time to
+that particular office's timezone. The application will not allow the creation of appointments that
+would conflict with the specified office's regular business hours (8:00am - 10:00pm), or if it would
+overlap with an already existing appointment for that customer or contact. IMPORTANT: all time
+should be entered in 24-hour military time (ie. 1:00am == 13:00), and should always be entered in
+the user's local time, NOT the selected office's local time. Changes can be saved by clicking the
+"SAVE" button, and both the "SAVE" and "CANCEL" buttons will bring you back to the Main Screen.
+
+REPORTS:
+From the Main Screen you can also click on the the "REPORTS" button in the bottom left corner to
+navigate to the Reports screen. Here, you can use ComboBoxes to see how many customer reside in each
+country and/or division within that country. You can also view a stacked barchart graph of all
+appointments within a given year separated by their appointment type. You can further filter this
+graph by selecting any combination of year, office, and/or contact. The "BACK" button at the bottom
+of this screen will navigate you back to the Main Screen.
