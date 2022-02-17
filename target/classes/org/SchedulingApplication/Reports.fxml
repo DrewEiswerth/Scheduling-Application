@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="601.0" prefWidth="885.6" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.SchedulingApplication.ReportsController">
+   <children>
+      <VBox layoutY="-1.0" prefHeight="678.0" prefWidth="974.0">
+         <children>
+            <HBox alignment="TOP_CENTER" prefHeight="54.0" prefWidth="934.0">
+               <children>
+                  <Label text="Customers By Location">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="934.0">
+               <children>
+                  <Label prefHeight="20.0" prefWidth="85.0" text="By Country:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="countryComboBox" onAction="#onActionCountryComboBox" prefWidth="170.0" promptText="Select">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin></ComboBox>
+                  <Label prefHeight="20.0" prefWidth="66.0" text="Division:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="divisionComboBox" onAction="#onActionDivisionComboBox" prefWidth="170.0" promptText="Select" />
+                  <Label prefHeight="26.0" prefWidth="55.0" text="Total:">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="25.0" top="1.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="customerCountLabel" prefHeight="20.0" prefWidth="71.0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="1.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="18.0" prefWidth="934.0" spacing="8.0">
+               <children>
+                  <Line endX="787.2929077148438" endY="0.8283591866493225" startX="-100.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="934.0">
+               <children>
+                  <Label text="Appointments Graph">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="55.0" prefWidth="934.0" spacing="8.0" styleClass="bar">
+               <children>
+                  <Label text="Year:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="yearComboBox" onAction="#onActionYearComboBox" prefWidth="170.0" promptText="Select" />
+                  <Label text="Office:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" top="4.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="officeComboBox" onAction="#onActionLocationComboBox" prefWidth="170.0" promptText="Select" />
+                  <Label text="Contact:">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="contactComboBox" onAction="#onActionContactComboBox" prefWidth="170.0" promptText="Select" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" fillHeight="false" prefHeight="398.0" prefWidth="934.0">
+               <children>
+                  <StackedBarChart fx:id="reportsBarChart" prefHeight="393.0" prefWidth="924.0" verticalGridLinesVisible="false">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                  </StackedBarChart>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="22.0" prefWidth="934.0">
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onActionBack" prefHeight="26.4" prefWidth="67.0" text="BACK">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
