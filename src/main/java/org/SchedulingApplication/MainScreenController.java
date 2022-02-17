@@ -144,7 +144,7 @@ public class MainScreenController implements Initializable {
     @FXML
     public void onActionUpdateCustomer(ActionEvent event) throws IOException {
 
-        if(customerTableView.getSelectionModel().getSelectedItem() == null) {
+        if (customerTableView.getSelectionModel().getSelectedItem() == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Please select a customer to update.");
             alert.showAndWait();
@@ -172,7 +172,7 @@ public class MainScreenController implements Initializable {
     @FXML
     public void onActionUpdateAppointment(ActionEvent event) throws IOException {
 
-        if(appointmentTableView.getSelectionModel().getSelectedItem() == null) {
+        if (appointmentTableView.getSelectionModel().getSelectedItem() == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText("Please select an appointment to update.");
             alert.showAndWait();
@@ -276,7 +276,7 @@ public class MainScreenController implements Initializable {
 
         Appointment appointment = appointmentTableView.getSelectionModel().getSelectedItem();
 
-        if(appointment == null) {
+        if (appointment == null) {
             Alert nullAlert = new Alert(Alert.AlertType.WARNING);
             nullAlert.setContentText("Please select an appointment to delete.");
             nullAlert.showAndWait();
@@ -286,7 +286,7 @@ public class MainScreenController implements Initializable {
         Alert confirmation = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to cancel this appointment?");
         Optional<ButtonType> confirmationResult = confirmation.showAndWait();
 
-        if(confirmationResult.isPresent() && confirmationResult.get() == ButtonType.OK) {
+        if (confirmationResult.isPresent() && confirmationResult.get() == ButtonType.OK) {
 
             String appointmentID = String.valueOf(appointment.getAppointmentID());
             String location = appointment.getOffice();
@@ -314,7 +314,7 @@ public class MainScreenController implements Initializable {
                 // remove the appointment from the active ObservableLists
                 allAppointments.remove(appointment);
 
-                if(searchAppointmentFilterPresent) {
+                if (searchAppointmentFilterPresent) {
                     searchFilteredAppointments.remove(appointment);
                 }
 
