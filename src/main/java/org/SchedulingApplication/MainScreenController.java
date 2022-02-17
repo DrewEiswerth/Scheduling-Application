@@ -24,6 +24,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 public class MainScreenController implements Initializable {
 
@@ -370,6 +371,16 @@ public class MainScreenController implements Initializable {
                     filteredCustomers.add(customer);
                 }
             }
+//            filteredCustomers = allCustomers.stream().filter(customer ->
+//                    String.valueOf(customer.getCustomerID()).contains(searchText) ||
+//                    customer.getName().toUpperCase().contains(searchText) ||
+//                    customer.getAddress().toUpperCase().contains(searchText) ||
+//                    customer.getPhone().toUpperCase().contains(searchText) ||
+//                    customer.getPostalCode().toUpperCase().contains(searchText) ||
+//                    customer.getEmail().toUpperCase().contains(searchText) ||
+//                    customer.getCountryName().toUpperCase().contains(searchText) ||
+//                    customer.getDivisionName().toUpperCase().contains(searchText)).collect(Collectors.toCollection(FXCollections::observableList));
+
             customerTableView.setItems(filteredCustomers);
         }
     }
