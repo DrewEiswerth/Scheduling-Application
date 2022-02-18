@@ -336,7 +336,7 @@ public class MainScreenController implements Initializable {
 
         String searchText = customerSearchTextField.getText().toUpperCase();  // allows search to ignore case
 
-        if(searchText.isEmpty()) {
+        if (searchText.isEmpty()) {
             customerFilterPresent = false;
             customerTableView.setItems(allCustomers);
         }
@@ -344,7 +344,7 @@ public class MainScreenController implements Initializable {
             customerFilterPresent = true;   // allows onActionDeleteCustomer() to know a search filter is present
 
             // if any customer attribute contains the searchText, add it to filteredCustomers
-            for(Customer customer : allCustomers) {
+            for (Customer customer : allCustomers) {
                 if (String.valueOf(customer.getCustomerID()).contains(searchText)) {
                     filteredCustomers.add(customer);
                 }
@@ -379,52 +379,52 @@ public class MainScreenController implements Initializable {
 
         String searchText = appointmentSearchTextField.getText().toUpperCase();  // allows search to ignore case
 
-        if(searchText.isEmpty() && !timeAppointmentFilterPresent) {
+        if (searchText.isEmpty() && !timeAppointmentFilterPresent) {
             searchAppointmentFilterPresent = false;
             appointmentTableView.setItems(allAppointments);
         }
-        else if(searchText.isEmpty()) {
+        else if (searchText.isEmpty()) {
             searchAppointmentFilterPresent = false;
             appointmentTableView.setItems(timeFilteredAppointments);
         }
-        else if(!timeAppointmentFilterPresent){
+        else if (!timeAppointmentFilterPresent){
 
             searchFilteredAppointments.clear();        // clears any previous search filter
             searchAppointmentFilterPresent = true;     // allows other methods to know a search filter is present
 
             // if any appointment attribute contains the searchText, add it to filteredAppointments
             for (Appointment appointment : allAppointments) {
-                if(String.valueOf(appointment.getAppointmentID()).contains(searchText)) {
+                if (String.valueOf(appointment.getAppointmentID()).contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getTitle().toUpperCase().contains(searchText)) {
+                else if (appointment.getTitle().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getDescription().toUpperCase().contains(searchText)) {
+                else if (appointment.getDescription().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getOffice().toUpperCase().contains(searchText)) {
+                else if (appointment.getOffice().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getContactName().toUpperCase().contains(searchText)) {
+                else if (appointment.getContactName().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getType().toUpperCase().contains(searchText)) {
+                else if (appointment.getType().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getStartDateString().contains(searchText)) {
+                else if (appointment.getStartDateString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getStartTimeString().contains(searchText)) {
+                else if (appointment.getStartTimeString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getEndDateString().contains(searchText)) {
+                else if (appointment.getEndDateString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(appointment.getEndTimeString().contains(searchText)) {
+                else if (appointment.getEndTimeString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
-                else if(String.valueOf(appointment.getCustomerID()).contains(searchText)) {
+                else if (String.valueOf(appointment.getCustomerID()).contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
                 }
             }
@@ -442,7 +442,7 @@ public class MainScreenController implements Initializable {
             for (Appointment appointment : allAppointments) {
                 if (String.valueOf(appointment.getAppointmentID()).contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
