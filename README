@@ -1,10 +1,10 @@
 OVERVIEW:
-This Scheduling Application is designed to allow users to view and manage company customer and
-customer appointment information from the company database in one easy-to-use interface. The
-application is designed for a company with offices located in Denver, Montreal, and London, and
-allows for all appointment information to be displayed and altered using the current user's timezone
-and a specified office when adding or updating appointments. The application was designed using
-Java JDK 11.0.10, JavaFX SDK 13, SceneBuilder, IntelliJ, and Maven.
+This Scheduling Application is designed to allow users to view and manage customer and appointment
+information from the company database in one easy-to-use interface. The application is designed
+for a company with offices located in Denver, Montreal, and London, and allows for all appointment
+information to be displayed and altered using the current user's time zone and a specified office
+when adding or updating appointments. This application was created using Java 11, JavaFX 13,
+SceneBuilder, IntelliJ, and Maven.
 
 GETTING STARTED:
 First, download the application files and unzip them. Next, open the unzipped folder using your
