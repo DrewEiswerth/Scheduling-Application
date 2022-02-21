@@ -177,9 +177,9 @@ public class LoginController implements Initializable {
             se1.printStackTrace();
         }
 
-        if(appWithin15Min) {
+        if (appWithin15Min) {
             Alert alert;
-            if(frenchDefault) {
+            if (frenchDefault) {
                 alert = new Alert(Alert.AlertType.WARNING, "Rendez-vous à venir\nRendez-vous identifiant: " +
                         appointmentID + "\nTemps: " + appStartString);
 
@@ -226,7 +226,7 @@ public class LoginController implements Initializable {
 
         zoneIDLabel.setText(TimeZone.getDefault().getID());
 
-        if(Locale.getDefault().getLanguage().equals("fr")) {
+        if (Locale.getDefault().getLanguage().equals("fr")) {
             frenchDefault = true;
             titleLabel.setText("Connexion à une Application de Planification");
             usernameLabel.setPrefWidth(137.6);
