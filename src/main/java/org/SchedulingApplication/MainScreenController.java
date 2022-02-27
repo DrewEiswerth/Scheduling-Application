@@ -448,61 +448,61 @@ public class MainScreenController implements Initializable {
                 }
                 else if (appointment.getTitle().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getDescription().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getOffice().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getContactName().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getType().toUpperCase().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getStartDateString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getStartTimeString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getEndDateString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (appointment.getEndTimeString().contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
                 else if (String.valueOf(appointment.getCustomerID()).contains(searchText)) {
                     searchFilteredAppointments.add(appointment);
-                    if(timeFilteredAppointments.contains(appointment)) {
+                    if (timeFilteredAppointments.contains(appointment)) {
                         doubleFilteredAppointments.add(appointment);
                     }
                 }
