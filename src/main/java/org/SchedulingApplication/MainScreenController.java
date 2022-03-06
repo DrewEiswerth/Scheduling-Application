@@ -514,13 +514,13 @@ public class MainScreenController implements Initializable {
     @FXML
     public void onActionMonthComboBox() {
 
-        if(monthComboBox.getValue().getName().equals("ALL")) {
+        if (monthComboBox.getValue().getName().equals("ALL")) {
             weekComboBox.setItems(null);
             weekComboBox.setDisable(true);
 
             timeAppointmentFilterPresent = false;
 
-            if(searchAppointmentFilterPresent) {
+            if (searchAppointmentFilterPresent) {
                 appointmentTableView.setItems(searchFilteredAppointments);
             }
             else {
