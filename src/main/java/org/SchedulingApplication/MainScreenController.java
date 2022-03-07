@@ -539,24 +539,24 @@ public class MainScreenController implements Initializable {
     @FXML
     public void onActionWeekComboBox() {
 
-        if(weekComboBox.getValue() == null) {  // this stops weekComboBox.setItems() from triggering this method
+        if (weekComboBox.getValue() == null) {  // this stops weekComboBox.setItems() from triggering this method
             return;
         }
         timeFilteredAppointments.clear();      // clears any previous time filter
         timeAppointmentFilterPresent = true;   // allows other methods to know a time filter is present
 
-        if(weekComboBox.getValue().getName().equals("ALL")) {
+        if (weekComboBox.getValue().getName().equals("ALL")) {
 
-            if(!searchAppointmentFilterPresent) {
+            if (!searchAppointmentFilterPresent) {
 
                 String month = String.valueOf(monthComboBox.getValue().getId());
-                if(month.length() == 1) {
+                if (month.length() == 1) {
                     month = '0' + month;
                 }
 
                 // adds appointment to timeFilteredAppointments if it's start month is same as selected month
-                for(Appointment appointment : allAppointments) {
-                    if(appointment.getStartDateString().substring(0, 2).equals(month)) {
+                for (Appointment appointment : allAppointments) {
+                    if (appointment.getStartDateString().substring(0, 2).equals(month)) {
                         timeFilteredAppointments.add(appointment);
                     }
                 }
