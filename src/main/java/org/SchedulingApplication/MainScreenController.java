@@ -566,7 +566,7 @@ public class MainScreenController implements Initializable {
                 doubleFilteredAppointments.clear();  // clears any previous double filter
 
                 String month = String.valueOf(monthComboBox.getValue().getId());
-                if(month.length() == 1) {
+                if (month.length() == 1) {
                     month = "0" + month;
                 }
 
@@ -574,10 +574,10 @@ public class MainScreenController implements Initializable {
                 // that appointment is also present is searchFilteredAppointments, meaning it fits both filters
 
                 // appointments are also added to timeFilteredAppointments in case search filter is ever removed
-                for(Appointment appointment : allAppointments) {
-                    if(appointment.getStartDateString().substring(0, 2).equals(month)) {
+                for (Appointment appointment : allAppointments) {
+                    if (appointment.getStartDateString().substring(0, 2).equals(month)) {
                         timeFilteredAppointments.add(appointment);
-                        if(searchFilteredAppointments.contains(appointment)) {
+                        if (searchFilteredAppointments.contains(appointment)) {
                             doubleFilteredAppointments.add(appointment);
                         }
                     }
