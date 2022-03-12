@@ -628,12 +628,12 @@ public class MainScreenController implements Initializable {
                 doubleFilteredAppointments.clear();  // clears any previous double filter
 
                 String month = String.valueOf(monthComboBox.getSelectionModel().getSelectedItem().getId());
-                if(month.length() == 1) {
+                if (month.length() == 1) {
                     month = "0" + month;
                 }
 
                 // adds appointment to monthFilteredAppointments if it's start month is same as selected month
-                for(Appointment appointment : allAppointments) {
+                for (Appointment appointment : allAppointments) {
                     if(appointment.getStartDateString().substring(0, 2).equals(month)) {
                         monthFilteredAppointments.add(appointment);
                     }
