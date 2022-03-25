@@ -634,7 +634,7 @@ public class MainScreenController implements Initializable {
 
                 // adds appointment to monthFilteredAppointments if it's start month is same as selected month
                 for (Appointment appointment : allAppointments) {
-                    if(appointment.getStartDateString().substring(0, 2).equals(month)) {
+                    if (appointment.getStartDateString().substring(0, 2).equals(month)) {
                         monthFilteredAppointments.add(appointment);
                     }
                 }
@@ -645,10 +645,10 @@ public class MainScreenController implements Initializable {
                 String stringStartDay;
 
                 // monthFilteredAppointments now filtered by week
-                for(Appointment appointment : monthFilteredAppointments) {
+                for (Appointment appointment : monthFilteredAppointments) {
 
                     stringStartDay = appointment.getStartDateString().substring(3, 5);
-                    if(stringStartDay.charAt(0) == '0') {
+                    if (stringStartDay.charAt(0) == '0') {
                         stringStartDay = stringStartDay.substring(1);
                     }
 
