@@ -658,9 +658,9 @@ public class MainScreenController implements Initializable {
                     // week, and appointment is also present in searchFilteredAppointments, meaning it fits both filters
 
                     // appointments are also added to timeFilteredAppointments in case search filter is ever removed
-                    if((startDayOfWeek <= appointmentStartDay) && (appointmentStartDay <= endDayOfWeek)) {
+                    if ((startDayOfWeek <= appointmentStartDay) && (appointmentStartDay <= endDayOfWeek)) {
                         timeFilteredAppointments.add(appointment);
-                        if(searchFilteredAppointments.contains(appointment)) {
+                        if (searchFilteredAppointments.contains(appointment)) {
                             doubleFilteredAppointments.add(appointment);
                         }
                     }
