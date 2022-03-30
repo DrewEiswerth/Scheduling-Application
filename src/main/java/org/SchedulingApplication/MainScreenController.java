@@ -591,7 +591,7 @@ public class MainScreenController implements Initializable {
             if (!searchAppointmentFilterPresent) {
 
                 String month = String.valueOf(monthComboBox.getSelectionModel().getSelectedItem().getId());
-                if(month.length() == 1) {
+                if (month.length() == 1) {
                     month = "0" + month;
                 }
 
